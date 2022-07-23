@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:24:15 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/23 20:32:31 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/23 22:17:10 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cat : public Animal
 	public:
 		Cat();
 		virtual ~Cat();
-		Cat(const Cat& c);
+		explicit Cat(const Cat& c);
 
 		Cat&		operator=(const Cat& c);
 		void		makeSound(void) const;

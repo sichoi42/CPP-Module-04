@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 16:23:19 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/23 19:02:22 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/23 22:16:44 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ class Animal
 	public:
 		Animal();
 		virtual ~Animal();
+		explicit Animal(const Animal& a);
 
+		Animal&	operator=(const Animal& a);
 		virtual std::string	getType(void) const;
 		virtual void		makeSound(void) const;
 };
