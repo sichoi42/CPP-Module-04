@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 16:23:19 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/23 21:32:45 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/23 22:14:48 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal
 	public:
 		Animal();
 		virtual ~Animal();
-		Animal(const Animal& a);
+		explicit Animal(const Animal& a);
 
 		Animal&	operator=(const Animal& a);
 		virtual std::string	getType(void) const;
