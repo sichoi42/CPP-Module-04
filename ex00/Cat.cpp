@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:29:31 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/23 21:38:25 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/25 15:27:44 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cat::~Cat()
 	std::cout << "Cat Deleted!" << std::endl;
 }
 
-Cat::Cat(const Cat& c)
+Cat::Cat(const Cat& c) : Animal()
 {
 	_type = c._type;
 	std::cout << "Copy Cat Created!" << std::endl;

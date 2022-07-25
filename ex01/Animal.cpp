@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 16:27:25 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/23 22:16:57 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/25 16:58:44 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 Animal::Animal() : _type("Animal")
 {
-	std::cout << "Animal Created!" << std::endl;
+	std::cout << GREEN << "Animal Created!" << RESET << std::endl;
 }
 
 Animal::~Animal()
 {
-	std::cout << "Animal Deleted!" << std::endl;
+	std::cout << RED << "Animal Deleted!" << RESET << std::endl;
 }
 
 Animal::Animal(const Animal& a)
 {
 	_type = a._type;
-	std::cout << "Copy Animal Created!" << std::endl;
+	std::cout << GREEN << "Copy Animal Created!" << RESET << std::endl;
 }
 
 Animal&	Animal::operator=(const Animal& a)
@@ -33,7 +33,7 @@ Animal&	Animal::operator=(const Animal& a)
 	if (this != &a)
 	{
 		_type = a._type;
-		std::cout << "Copy Assigned Animal Created!" << std::endl;
+		std::cout << GREEN << "Copy Assigned Animal Created!" << RESET << std::endl;
 	}
 	return (*this);
 }

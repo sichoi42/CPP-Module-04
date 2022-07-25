@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:29:31 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/23 20:33:39 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/25 16:57:30 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,20 @@ Cat::Cat() : Animal(), _brain(NULL)
 {
 	_type = "Cat";
 	_brain = new Brain();
-	std::cout << "Cat Created!" << std::endl;
+	std::cout << GREEN << "Cat Created!" << RESET << std::endl;
 }
 
 Cat::~Cat()
 {
 	delete _brain;
-	std::cout << "Cat Deleted!" << std::endl;
+	std::cout << RED << "Cat Deleted!" << RESET << std::endl;
 }
 
 Cat::Cat(const Cat& c) : Animal(), _brain(NULL)
 {
 	_type = c._type;
 	_brain = new Brain(*c._brain);
-	std::cout << "Copy Cat Created!" << std::endl;
+	std::cout << GREEN << "Copy Cat Created!" << RESET << std::endl;
 }
 
 Cat&	Cat::operator=(const Cat& c)
@@ -38,7 +38,7 @@ Cat&	Cat::operator=(const Cat& c)
 	{
 		_type = c._type;
 		_brain = new Brain(*c._brain);
-		std::cout << "Copy Assigned Cat Created!" << std::endl;
+		std::cout << GREEN << "Copy Assigned Cat Created!" << RESET << std::endl;
 	}
 	return (*this);
 }

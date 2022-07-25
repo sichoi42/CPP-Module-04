@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:22:25 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/23 20:40:59 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/25 16:58:11 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,20 @@ Dog::Dog() : Animal(), _brain(NULL)
 {
 	_type = "Dog";
 	_brain = new Brain();
-	std::cout << "Dog Created!" << std::endl;
+	std::cout << GREEN << "Dog Created!" << RESET << std::endl;
 }
 
 Dog::~Dog()
 {
-	std::cout << "Dog Deleted!" << std::endl;
+	delete _brain;
+	std::cout << RED << "Dog Deleted!" << RESET << std::endl;
 }
 
 Dog::Dog(const Dog& d) : Animal(), _brain(NULL)
 {
 	_type = d._type;
 	_brain = new Brain(*d._brain);
-	std::cout << "Copy Dog Created!" << std::endl;
+	std::cout << GREEN << "Copy Dog Created!"<< RESET << std::endl;
 }
 
 Dog&	Dog::operator=(const Dog& d)
@@ -37,7 +38,7 @@ Dog&	Dog::operator=(const Dog& d)
 	{
 		_type = d._type;
 		_brain = new Brain(*d._brain);
-		std::cout << "Copy Assigned Dog Created!" << std::endl;
+		std::cout << GREEN << "Copy Assigned Dog Created!"<< RESET << std::endl;
 	}
 	return (*this);
 }

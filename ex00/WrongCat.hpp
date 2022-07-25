@@ -6,7 +6,7 @@
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 19:05:10 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/23 19:09:48 by sichoi           ###   ########.fr       */
+/*   Updated: 2022/07/25 15:30:44 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ class WrongCat : public WrongAnimal
 	public:
 		WrongCat();
 		virtual ~WrongCat();
+		WrongCat(const WrongCat& wc);
 
+		WrongCat&	operator=(const WrongCat& wc);
 		void		makeSound(void) const;
 		std::string	getType(void) const;
 };
