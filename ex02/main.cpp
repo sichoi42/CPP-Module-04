@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 16:23:19 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/25 17:07:15 by sichoi           ###   ########.fr       */
+/*   Created: 2022/07/23 17:33:28 by sichoi            #+#    #+#             */
+/*   Updated: 2022/07/25 17:10:25 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-# include <iostream>
-
-class Animal
+int	main(void)
 {
-	protected:
-		std::string	_type;
-
-	public:
-		Animal();
-		virtual ~Animal();
-		explicit Animal(const Animal& a);
-
-		Animal&	operator=(const Animal& a);
-		virtual std::string	getType(void) const;
-		virtual void		makeSound(void) const;
-};
-
-#endif
+	// Animal a;
+	Cat c;
+	return (0);
+}

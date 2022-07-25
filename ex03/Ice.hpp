@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sichoi <sichoi@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 16:23:19 by sichoi            #+#    #+#             */
-/*   Updated: 2022/07/25 17:07:15 by sichoi           ###   ########.fr       */
+/*   Created: 2022/07/25 18:46:55 by sichoi            #+#    #+#             */
+/*   Updated: 2022/07/25 19:35:49 by sichoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
-# include <iostream>
+# include "AMateria.hpp"
 
-class Animal
+class Ice : public AMateria
 {
-	protected:
-		std::string	_type;
+	private:
+		std::string	_name;
 
 	public:
-		Animal();
-		virtual ~Animal();
-		explicit Animal(const Animal& a);
+		Ice();
+		~Ice();
+		Ice(const Ice& ice);
 
-		Animal&	operator=(const Animal& a);
-		virtual std::string	getType(void) const;
-		virtual void		makeSound(void) const;
+		Ice&		operator=(const Ice& ice);
+		AMateria	*clone(void) const;
+		void		use(ICharacter& target);
 };
 
 #endif
